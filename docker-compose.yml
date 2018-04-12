@@ -1,0 +1,11 @@
+version: '3'
+services:
+  server:
+    build: . 
+    working_dir: /r
+    ports:
+      - 8787:8787
+    volumes:
+      - .:/r
+    command: bash -c "rstudio-server start && /bin/bash"
+    tty: true
